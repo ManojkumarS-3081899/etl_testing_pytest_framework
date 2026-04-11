@@ -1,14 +1,3 @@
-"""
-ETL Pipeline  —  Extract → Transform → Load
-=============================================
-Usage:
-    python etl/etl_process.py
-
-Behaviour:
-    • If target CSV already exists  → prints a data summary and exits.
-    • If target CSV does NOT exist  → runs the full pipeline and saves output.
-"""
-
 import os
 import sys
 import hashlib

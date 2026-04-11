@@ -19,14 +19,14 @@ from config import (
 
 @pytest.fixture(scope="session")
 def source_df() -> pd.DataFrame:
-    """Raw Excel data — no transforms applied."""
+    
     return pd.read_excel(SOURCE_FILE, sheet_name="ORDERS_RAW",
                          header=1, dtype=str)
 
 
 @pytest.fixture(scope="session")
 def target_df() -> pd.DataFrame:
-    """ETL output CSV loaded with proper type casting."""
+    
     assert os.path.exists(TARGET_FILE), (
         f"Target file not found: {TARGET_FILE}\n"
         "Run  python etl/etl_process.py  first."
@@ -45,8 +45,7 @@ def target_df() -> pd.DataFrame:
 
 @pytest.fixture(scope="session")
 def expected_df(source_df, validation_rules) -> pd.DataFrame:
-    """Source + independent business logic (for minus queries).
-    Applies the SAME rules as the ETL but coded INDEPENDENTLY."""
+    
     df = source_df.copy()
 
     for col in df.select_dtypes(include="object").columns:
@@ -88,7 +87,7 @@ def expected_df(source_df, validation_rules) -> pd.DataFrame:
 
 @pytest.fixture(scope="session")
 def validation_rules() -> dict:
-    """Reference tables: valid customer IDs and expected partition months."""
+    
     rules = {"valid_customer_ids": None, "expected_partition_months": None}
     try:
         cref = pd.read_excel(SOURCE_FILE, sheet_name="CUSTOMERS_REF",
@@ -97,7 +96,7 @@ def validation_rules() -> dict:
             cref["CUSTOMER ID"].dropna().str.strip().tolist()
         )
     except Exception:
-        pass
+        print("Warning: CUSTOMERS_REF sheet not found, skipping referential integrity")
     try:
         pc = pd.read_excel(SOURCE_FILE, sheet_name="PARTITION_CHECK",
                            header=1, dtype=str)
@@ -105,7 +104,7 @@ def validation_rules() -> dict:
         months = months[months.str.match(r"^\d{4}-\d{2}$")]
         rules["expected_partition_months"] = set(months.tolist())
     except Exception:
-        pass
+        print("Warning: PARTITION_CHECK sheet not found, skipping partition completeness check")
     return rules
 
 

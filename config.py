@@ -37,9 +37,9 @@ CRITICAL_COLUMNS = [
 
 # ── Numeric boundaries ──────────────────────────────────────────────────────
 QUANTITY_MIN         = 1
-QUANTITY_MAX         = 50
+QUANTITY_MAX         = 100
 AGE_MIN              = 18
-AGE_MAX              = 80
+AGE_MAX              = 100
 RATING_MIN           = 1
 RATING_MAX           = 5
 PRODUCT_NAME_MAX_LEN = 50
