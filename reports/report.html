@@ -51,7 +51,7 @@
     .mode-box {
       background: #fff; border-radius: 10px; padding: 16px 20px;
       margin-bottom: 28px; box-shadow: 0 1px 3px rgba(0,0,0,0.07);
-      border-left: 4px solid #22c55e; font-size: 13px; color: #374151;
+      border-left: 4px solid #ef4444; font-size: 13px; color: #374151;
     }
     .mode-box strong { color: #0f172a; }
   </style>
@@ -59,16 +59,16 @@
 <body>
   <div class="header">
     <h1>ETL Test Report</h1>
-    <p>Generated: 2026-04-12 05:44:22 &nbsp;|&nbsp;
+    <p>Generated: 2026-04-15 10:14:51 &nbsp;|&nbsp;
        Source: ETL_Validation_Dataset_2000rows 1.xlsx &nbsp;|&nbsp;
-       Mode: @sanity</p>
+       Mode: All tests</p>
   </div>
 
   <div class="page">
 
     <div class="section-title">Run Configuration</div>
     <div class="mode-box">
-      <strong>Mode:</strong> @sanity &nbsp;&nbsp;|&nbsp;&nbsp;
+      <strong>Mode:</strong> All tests &nbsp;&nbsp;|&nbsp;&nbsp;
       <strong>Target:</strong> orders_clean.csv &nbsp;&nbsp;|&nbsp;&nbsp;
       <strong>Approach:</strong>
       <span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;
@@ -82,19 +82,19 @@
     <div class="section-title">Overall Summary</div>
     <div class="card-row">
       <div class="card blue">
-        <div class="num">6</div><div class="lbl">Total Tests</div>
+        <div class="num">47</div><div class="lbl">Total Tests</div>
       </div>
       <div class="card green">
-        <div class="num">6</div><div class="lbl">Passed</div>
+        <div class="num">46</div><div class="lbl">Passed</div>
       </div>
       <div class="card red">
-        <div class="num">0</div><div class="lbl">Failed</div>
+        <div class="num">1</div><div class="lbl">Failed</div>
       </div>
       <div class="card amber">
         <div class="num">0</div><div class="lbl">Skipped</div>
       </div>
-      <div class="card green">
-        <div class="num">100%</div><div class="lbl">Pass Rate</div>
+      <div class="card red">
+        <div class="num">98%</div><div class="lbl">Pass Rate</div>
       </div>
     </div>
 
@@ -113,6 +113,39 @@
       <tbody>
         <tr>
           <td style="font-weight:600">Sanity</td>
+          <td style="text-align:center">6</td>
+          <td style="text-align:center;color:#22c55e;font-weight:600">6</td>
+          <td style="text-align:center;color:#ef4444;font-weight:600">0</td>
+          <td style="text-align:center;color:#94a3b8">0</td>
+          <td style="text-align:center">
+            <span style="background:#22c55e;color:#fff;padding:2px 10px;
+                   border-radius:999px;font-size:12px;font-weight:600">100%</span>
+          </td>
+        </tr>
+        <tr>
+          <td style="font-weight:600">Functional</td>
+          <td style="text-align:center">21</td>
+          <td style="text-align:center;color:#22c55e;font-weight:600">21</td>
+          <td style="text-align:center;color:#ef4444;font-weight:600">0</td>
+          <td style="text-align:center;color:#94a3b8">0</td>
+          <td style="text-align:center">
+            <span style="background:#22c55e;color:#fff;padding:2px 10px;
+                   border-radius:999px;font-size:12px;font-weight:600">100%</span>
+          </td>
+        </tr>
+        <tr>
+          <td style="font-weight:600">Data Quality</td>
+          <td style="text-align:center">14</td>
+          <td style="text-align:center;color:#22c55e;font-weight:600">13</td>
+          <td style="text-align:center;color:#ef4444;font-weight:600">1</td>
+          <td style="text-align:center;color:#94a3b8">0</td>
+          <td style="text-align:center">
+            <span style="background:#ef4444;color:#fff;padding:2px 10px;
+                   border-radius:999px;font-size:12px;font-weight:600">93%</span>
+          </td>
+        </tr>
+        <tr>
+          <td style="font-weight:600">Regression</td>
           <td style="text-align:center">6</td>
           <td style="text-align:center;color:#22c55e;font-weight:600">6</td>
           <td style="text-align:center;color:#ef4444;font-weight:600">0</td>
@@ -152,7 +185,7 @@
           </td>
           <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
           <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
-            21 ms</td>
+            26 ms</td>
         </tr>
         <tr style="border-bottom:1px solid #f1f5f9">
           <td style="color:#94a3b8;text-align:center;width:40px">2</td>
@@ -169,7 +202,7 @@
           </td>
           <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
           <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
-            1091 ms</td>
+            1925 ms</td>
         </tr>
         <tr style="border-bottom:1px solid #f1f5f9">
           <td style="color:#94a3b8;text-align:center;width:40px">3</td>
@@ -237,7 +270,704 @@
           </td>
           <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
           <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            1 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">7</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              FUNCTIONAL
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestNullCheck</td>
+          <td>
+            <span style="font-weight:500">test_critical_nulls_minus</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">MINUS</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            3 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">8</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              FUNCTIONAL
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestNullCheck</td>
+          <td>
+            <span style="font-weight:500">test_no_column_exceeds_null_rate_limit</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            3 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">9</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              FUNCTIONAL
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestNullCheck</td>
+          <td>
+            <span style="font-weight:500">test_no_whitespace_only_values[ORDER ID]</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            3 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">10</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              FUNCTIONAL
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestNullCheck</td>
+          <td>
+            <span style="font-weight:500">test_no_whitespace_only_values[CUSTOMER ID]</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            3 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">11</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              FUNCTIONAL
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestRegexPattern</td>
+          <td>
+            <span style="font-weight:500">test_regex_minus[ORDER ID-^ORD\\d{3,}$-ORDxxx+]</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">MINUS</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            5 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">12</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              FUNCTIONAL
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestRegexPattern</td>
+          <td>
+            <span style="font-weight:500">test_regex_minus[CUSTOMER EMAIL-^[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,}$-valid email]</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">MINUS</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            5 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">13</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              FUNCTIONAL
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestRegexPattern</td>
+          <td>
+            <span style="font-weight:500">test_regex_minus[CUSTOMER PHONE-^\\+1\\d{10}$-+1XXXXXXXXXX]</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">MINUS</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            4 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">14</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              FUNCTIONAL
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestDateValidation</td>
+          <td>
+            <span style="font-weight:500">test_null_dates_minus</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">MINUS</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            1 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">15</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              FUNCTIONAL
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestDateValidation</td>
+          <td>
+            <span style="font-weight:500">test_dates_within_2020_to_2030</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
             2 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">16</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              FUNCTIONAL
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestDateValidation</td>
+          <td>
+            <span style="font-weight:500">test_no_future_dates</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            1 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">17</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              FUNCTIONAL
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestReferentialIntegrity</td>
+          <td>
+            <span style="font-weight:500">test_categorical_minus[STATUS-valid_set0]</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">MINUS</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            2 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">18</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              FUNCTIONAL
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestReferentialIntegrity</td>
+          <td>
+            <span style="font-weight:500">test_categorical_minus[PAYMENT METHOD-valid_set1]</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">MINUS</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            1 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">19</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              FUNCTIONAL
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestReferentialIntegrity</td>
+          <td>
+            <span style="font-weight:500">test_categorical_minus[REGION-valid_set2]</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">MINUS</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            2 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">20</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              FUNCTIONAL
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestReferentialIntegrity</td>
+          <td>
+            <span style="font-weight:500">test_categorical_minus[PRODUCT CATEGORY-valid_set3]</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">MINUS</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            2 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">21</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              FUNCTIONAL
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestReferentialIntegrity</td>
+          <td>
+            <span style="font-weight:500">test_no_invalid_categoricals_in_target</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            3 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">22</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              FUNCTIONAL
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestReferentialIntegrity</td>
+          <td>
+            <span style="font-weight:500">test_customer_ref_minus</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">MINUS</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            2 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">23</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              FUNCTIONAL
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestAggregateRecon</td>
+          <td>
+            <span style="font-weight:500">test_total_amount_minus</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">MINUS</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            1 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">24</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              FUNCTIONAL
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestAggregateRecon</td>
+          <td>
+            <span style="font-weight:500">test_per_row_total_calculation</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            2 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">25</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              FUNCTIONAL
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestAggregateRecon</td>
+          <td>
+            <span style="font-weight:500">test_grand_total_is_positive</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            1 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">26</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              FUNCTIONAL
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestCompositeKey</td>
+          <td>
+            <span style="font-weight:500">test_composite_key_unique_in_target</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            7 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">27</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              FUNCTIONAL
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestCompositeKey</td>
+          <td>
+            <span style="font-weight:500">test_dedup_count_minus</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">MINUS</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            3 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">28</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              DATA QUALITY
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestDuplicateCheck</td>
+          <td>
+            <span style="font-weight:500">test_no_full_row_duplicates</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            5 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">29</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              DATA QUALITY
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestNumericRange</td>
+          <td>
+            <span style="font-weight:500">test_range_minus[QUANTITY-1-100]</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">MINUS</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            3 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">30</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              DATA QUALITY
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestNumericRange</td>
+          <td>
+            <span style="font-weight:500">test_range_minus[AGE-18-100]</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">MINUS</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            2 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">31</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              DATA QUALITY
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestNumericRange</td>
+          <td>
+            <span style="font-weight:500">test_range_minus[RATING-1-5]</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">MINUS</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            3 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">32</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              DATA QUALITY
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestNumericRange</td>
+          <td>
+            <span style="font-weight:500">test_unit_price_positive</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            1 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">33</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              DATA QUALITY
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestNumericRange</td>
+          <td>
+            <span style="font-weight:500">test_salary_positive</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            1 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">34</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              DATA QUALITY
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestStringLength</td>
+          <td>
+            <span style="font-weight:500">test_product_name_within_max_length</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            2 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">35</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              DATA QUALITY
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestOutlierDetection</td>
+          <td>
+            <span style="font-weight:500">test_zscore_outlier_rate[QUANTITY]</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            3 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">36</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              DATA QUALITY
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestOutlierDetection</td>
+          <td>
+            <span style="font-weight:500">test_zscore_outlier_rate[UNIT PRICE]</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            2 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">37</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              DATA QUALITY
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestOutlierDetection</td>
+          <td>
+            <span style="font-weight:500">test_zscore_outlier_rate[TOTAL AMOUNT]</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            2 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">38</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              DATA QUALITY
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestOutlierDetection</td>
+          <td>
+            <span style="font-weight:500">test_zscore_outlier_rate[SALARY USD]</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            2 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">39</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              DATA QUALITY
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestPartitionCompleteness</td>
+          <td>
+            <span style="font-weight:500">test_no_null_partition_month</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            1 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">40</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              DATA QUALITY
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestPartitionCompleteness</td>
+          <td>
+            <span style="font-weight:500">test_expected_months_present</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            <div style="margin-top:6px;padding:8px 12px;background:#fef2f2;border-left:3px solid #ef4444;border-radius:4px;font-size:12px;color:#7f1d1d;word-break:break-word">AssertionError: Missing months: ['2024-06', '2024-11', '2025-02']</div>
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#ef4444;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">FAIL</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            1 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">41</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              DATA QUALITY
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestPartitionCompleteness</td>
+          <td>
+            <span style="font-weight:500">test_each_partition_has_rows</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            2 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">42</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              REGRESSION
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestSchemaDrift</td>
+          <td>
+            <span style="font-weight:500">test_no_missing_columns</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            1 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">43</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              REGRESSION
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestSchemaDrift</td>
+          <td>
+            <span style="font-weight:500">test_no_extra_columns</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            1 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">44</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              REGRESSION
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestSchemaDrift</td>
+          <td>
+            <span style="font-weight:500">test_column_order</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            1 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">45</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              REGRESSION
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestFileIntegrity</td>
+          <td>
+            <span style="font-weight:500">test_target_csv_exists</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            1 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">46</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              REGRESSION
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestFileIntegrity</td>
+          <td>
+            <span style="font-weight:500">test_md5_checksum_matches</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            3 ms</td>
+        </tr>
+        <tr style="border-bottom:1px solid #f1f5f9">
+          <td style="color:#94a3b8;text-align:center;width:40px">47</td>
+          <td style="width:120px">
+            <span style="background:#e0f2fe;color:#0369a1;padding:2px 8px;
+                   border-radius:4px;font-size:11px;font-weight:600">
+              REGRESSION
+            </span>
+          </td>
+          <td style="width:180px;font-size:12px;color:#475569">TestFileIntegrity</td>
+          <td>
+            <span style="font-weight:500">test_csv_row_count_matches_dataframe</span><span style="background:#e0e7ff;color:#4338ca;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;margin-left:8px">CHECK</span>
+            
+          </td>
+          <td style="text-align:center;white-space:nowrap"><span style="background:#22c55e;color:#fff;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600">PASS</span></td>
+          <td style="text-align:right;color:#94a3b8;font-size:12px;white-space:nowrap">
+            3 ms</td>
         </tr></tbody>
     </table>
 
